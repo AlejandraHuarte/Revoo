@@ -388,7 +388,7 @@ export default function LandingPage() {
       )}
 
       {/* Header */}
-      <header className="w-full px-4 lg:px-6 h-24 flex items-center border-b bg-white/95 backdrop-blur-sm sticky top-0 z-40">
+      <header className="w-full px-4 lg:px-6 py-4 md:py-0 flex items-center border-b bg-white/95 backdrop-blur-sm sticky top-0 z-40">
         <div className="container mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between w-full gap-2">
           <Link href="/" className="flex items-center justify-center">
             <Image
