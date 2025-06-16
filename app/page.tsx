@@ -145,6 +145,7 @@ const translations = {
     itemsPlaceholderRent: "e.g., Power drill, Camera, Bicycle...",
     itemsPlaceholderList: "e.g., Power tools, Camera equipment, Sports gear...",
     locationPlaceholder: "e.g., Madrid, Barcelona...",
+    whenYouNeedIt: "When do you need it?",
 
     // Success/Error messages
     thankYouMessage: "Thank you! We've received your {type} request and will contact you soon.",
@@ -863,13 +864,10 @@ export default function LandingPage() {
                   <Input id="rent-location" name="location" placeholder={t.locationPlaceholder} className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" />
                 </div>
                 <div>
-                 <label htmlFor="rent-dates" className="block text-sm font-medium text-gray-700">
-    {t.whenYouNeedIt}
-                </label>
-                <input
+                  <Label htmlFor="rent-dates">{t.whenYouNeedIt}</Label>
+                <Input
                   id="rent-dates"
                   name="dates"
-                  type="text"
                   placeholder="e.g., June 20–23"
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600"
                 />
