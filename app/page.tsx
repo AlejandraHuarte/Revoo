@@ -761,7 +761,7 @@ export default function LandingPage() {
               </div>
               <div className="w-full max-w-sm space-y-2">
                 <div className="flex gap-2">
-                  <Input type="email" placeholder={t.enterEmail} className="max-w-lg flex-1 bg-white" />
+                  <Input type="email" placeholder={t.enterEmail} className="max-w-lg flex-1 bg-white rounded-md px-4 py-2" />
                   <Button
                     type="button"
                     variant="secondary"
@@ -840,23 +840,23 @@ export default function LandingPage() {
               <form onSubmit={(e) => handleFormSubmit(e, "Rent Request")} className="space-y-4">
                 <div>
                   <Label htmlFor="rent-name">{t.name}</Label>
-                  <Input id="rent-name" name="name" required />
+                  <Input id="rent-name" name="name" required className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" />
                 </div>
                 <div>
                   <Label htmlFor="rent-email">{t.email}</Label>
-                  <Input id="rent-email" name="email" type="email" required />
+                  <Input id="rent-email" name="email" type="email" required className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" />
                 </div>
                 <div>
                   <Label htmlFor="rent-phone">{t.phone}</Label>
-                  <Input id="rent-phone" name="phone" type="tel" />
+                  <Input id="rent-phone" name="phone" type="tel" className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" />
                 </div>
                 <div>
                   <Label htmlFor="rent-items">{t.whatItemsLookingFor}</Label>
-                  <Textarea id="rent-items" name="items" placeholder={t.itemsPlaceholderRent} />
+                  <Textarea id="rent-items" name="items" placeholder={t.itemsPlaceholderRent} className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" />
                 </div>
                 <div>
                   <Label htmlFor="rent-location">{t.yourLocation}</Label>
-                  <Input id="rent-location" name="location" placeholder={t.locationPlaceholder} />
+                  <Input id="rent-location" name="location" placeholder={t.locationPlaceholder} className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" />
                 </div>
                 <Button type="submit" className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 px-6 rounded-full font-semibold transition duration-200"
  disabled={isSubmitting}>
@@ -888,23 +888,23 @@ export default function LandingPage() {
               <form onSubmit={(e) => handleFormSubmit(e, "List Items Request")} className="space-y-4">
                 <div>
                   <Label htmlFor="list-name">{t.name}</Label>
-                  <Input id="list-name" name="name" required />
+                  <Input id="list-name" name="name" required className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" />
                 </div>
                 <div>
                   <Label htmlFor="list-email">{t.email}</Label>
-                  <Input id="list-email" name="email" type="email" required />
+                  <Input id="list-email" name="email" type="email" required className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" />
                 </div>
                 <div>
                   <Label htmlFor="list-phone">{t.phone}</Label>
-                  <Input id="list-phone" name="phone" type="tel" />
+                  <Input id="list-phone" name="phone" type="tel" className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" />
                 </div>
                 <div>
                   <Label htmlFor="list-items">{t.whatItemsRentOut}</Label>
-                  <Textarea id="list-items" name="items" placeholder={t.itemsPlaceholderList} />
+                  <Textarea id="list-items" name="items" placeholder={t.itemsPlaceholderList} className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" />
                 </div>
                 <div>
                   <Label htmlFor="list-location">{t.yourLocation}</Label>
-                  <Input id="list-location" name="location" placeholder={t.locationPlaceholder} />
+                  <Input id="list-location" name="location" placeholder={t.locationPlaceholder} className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" />
                 </div>
                 <Button type="submit" className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 px-6 rounded-full font-semibold transition duration-200" disabled={isSubmitting}>
                   {isSubmitting ? (
@@ -935,11 +935,13 @@ export default function LandingPage() {
               <form onSubmit={(e) => handleFormSubmit(e, "Newsletter Signup")} className="space-y-4">
                 <div>
                   <Label htmlFor="newsletter-email">{t.email}</Label>
-                  <Input id="newsletter-email" name="email" type="email" required />
+                  <Input id="newsletter-email" name="email" type="email" required
+  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" />
                 </div>
                 <div>
                   <Label htmlFor="newsletter-name">{t.nameOptional}</Label>
-                  <Input id="newsletter-name" name="name" />
+                  <Input id="newsletter-name" name="name"
+  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500" />
                 </div>
                 <Button type="submit" className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 px-6 rounded-full font-semibold shadow-md transition duration-200" disabled={isSubmitting}>
                   {isSubmitting ? (
