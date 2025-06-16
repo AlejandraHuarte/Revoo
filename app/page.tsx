@@ -146,6 +146,7 @@ const translations = {
     itemsPlaceholderList: "e.g., Power tools, Camera equipment, Sports gear...",
     locationPlaceholder: "e.g., Madrid, Barcelona...",
     whenYouNeedIt: "When do you need it?",
+    datesPlaceholder: "e.g., June 20–23",
 
     // Success/Error messages
     thankYouMessage: "Thank you! We've received your {type} request and will contact you soon.",
