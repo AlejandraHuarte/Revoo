@@ -402,7 +402,7 @@ export default function LandingPage() {
           </Link>
           
           <div className="md:hidden h-px w-full bg-gray-200 my-2"></div>
-          <nav className="flex gap-2 md:gap-6 flex-wrap justify-center md:justify-start w-full md:w-auto">
+          <nav className="hidden md:flex gap-6 flex-wrap justify-start w-auto">
             <Link href="#how-it-works" className="text-sm font-medium hover:text-purple-600 transition-colors">
               {t.howItWorks}
             </Link>
@@ -429,7 +429,7 @@ export default function LandingPage() {
             </Button>
             <Button
               size="sm"
-              className="bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700 text-white px-4 py-2 rounded-full transition duration-200"
+              className="hidden md:inline-flex bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700 text-white px-4 py-2 rounded-full transition duration-200"
               onClick={() => {
                 trackButtonClick("Get Started", "Header")
                 setShowRentForm(true)
