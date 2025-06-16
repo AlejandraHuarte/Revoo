@@ -936,12 +936,12 @@ export default function LandingPage() {
                 <div>
                   <Label htmlFor="newsletter-email">{t.email}</Label>
                   <Input id="newsletter-email" name="email" type="email" required
-  className="w-full px-3 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500" />
+  className="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500" />
                 </div>
                 <div>
                   <Label htmlFor="newsletter-name">{t.nameOptional}</Label>
                   <Input id="newsletter-name" name="name"
-  className="w-full px-3 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500" />
+  className="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500" />
                 </div>
                 <Button type="submit" className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 px-6 rounded-full font-semibold shadow-md transition duration-200" disabled={isSubmitting}>
                   {isSubmitting ? (
