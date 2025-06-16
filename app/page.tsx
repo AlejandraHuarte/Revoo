@@ -860,6 +860,16 @@ export default function LandingPage() {
                   <Label htmlFor="rent-location">{t.yourLocation}</Label>
                   <Input id="rent-location" name="location" placeholder={t.locationPlaceholder} className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" />
                 </div>
+                <div>
+                 <label htmlFor="rent-dates">{t.datesNeeded}</label>
+                <input
+                  id="rent-dates"
+                  name="dates"
+                  type="text"
+                  placeholder="e.g., June 20–23"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600"
+                />
+                </div>
                 <Button type="submit" className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 px-6 rounded-full font-semibold transition duration-200"
  disabled={isSubmitting}>
                   {isSubmitting ? (
