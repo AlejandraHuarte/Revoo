@@ -359,7 +359,7 @@ export default function LandingPage() {
       {/* Language Selector Modal */}
       {showLanguageSelector && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
-          <Card className="w-full max-w-md bg-white">
+          <Card className="w-full max-w-md bg-white rounded-2xl shadow-xl p-1">
             <CardContent className="p-8 text-center">
               <div className="mb-6">
                 <Globe className="h-12 w-12 mx-auto mb-4 text-purple-600" />
@@ -615,7 +615,7 @@ export default function LandingPage() {
                 { icon: Gamepad2, name: t.gaming, count: "200+" },
                 { icon: Music, name: t.musicAudio, count: "100+" },
               ].map((category, index) => (
-                <Card key={index} className="text-center hover:shadow-md transition-shadow cursor-pointer group">
+                <Card key={index} className="text-center hover:shadow-md transition-shadow cursor-pointer group rounded-xl bg-white">
                   <CardContent className="p-6">
                     <category.icon className="h-8 w-8 mx-auto mb-2 text-purple-600 group-hover:text-violet-600 transition-colors" />
                     <h3 className="font-semibold text-sm">{category.name}</h3>
@@ -829,7 +829,7 @@ export default function LandingPage() {
       {/* Modal Forms */}
       {showRentForm && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
-          <Card className="w-full max-w-md bg-white">
+          <Card className="w-full max-w-md bg-white rounded-2xl shadow-xl p-1">
             <CardContent className="p-6">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-lg font-semibold">{t.wantToRent}</h3>
@@ -877,7 +877,7 @@ export default function LandingPage() {
 
       {showListForm && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
-          <Card className="w-full max-w-md bg-white">
+          <Card className="w-full max-w-md bg-white rounded-2xl shadow-xl p-1">
             <CardContent className="p-6">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-lg font-semibold">{t.wantToList}</h3>
@@ -924,7 +924,7 @@ export default function LandingPage() {
 
       {showNewsletterForm && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
-          <Card className="w-full max-w-md bg-white">
+          <Card className="w-full max-w-md bg-white rounded-2xl shadow-xl p-1">
             <CardContent className="p-6">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-lg font-semibold">{t.getNotified}</h3>
