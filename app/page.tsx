@@ -868,7 +868,7 @@ export default function LandingPage() {
                 <Input
                   id="rent-dates"
                   name="dates"
-                  placeholder="e.g., June 20–23"
+                  placeholder={t.datesPlaceholder}
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600"
                 />
                 </div>
