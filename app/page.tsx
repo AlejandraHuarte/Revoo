@@ -359,7 +359,7 @@ export default function LandingPage() {
       {/* Language Selector Modal */}
       {showLanguageSelector && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
-          <Card className="w-full max-w-md">
+          <Card className="w-full max-w-md bg-white">
             <CardContent className="p-8 text-center">
               <div className="mb-6">
                 <Globe className="h-12 w-12 mx-auto mb-4 text-purple-600" />
@@ -829,7 +829,7 @@ export default function LandingPage() {
       {/* Modal Forms */}
       {showRentForm && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
-          <Card className="w-full max-w-md">
+          <Card className="w-full max-w-md bg-white">
             <CardContent className="p-6">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-lg font-semibold">{t.wantToRent}</h3>
@@ -876,7 +876,7 @@ export default function LandingPage() {
 
       {showListForm && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
-          <Card className="w-full max-w-md">
+          <Card className="w-full max-w-md bg-white">
             <CardContent className="p-6">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-lg font-semibold">{t.wantToList}</h3>
@@ -923,7 +923,7 @@ export default function LandingPage() {
 
       {showNewsletterForm && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
-          <Card className="w-full max-w-md">
+          <Card className="w-full max-w-md bg-white">
             <CardContent className="p-6">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-lg font-semibold">{t.getNotified}</h3>
