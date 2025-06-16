@@ -369,14 +369,14 @@ export default function LandingPage() {
               <div className="space-y-3">
                 <Button
                   onClick={() => handleLanguageSelect("en")}
-                  className="w-full bg-purple-600 hover:bg-purple-700 text-white"
+                  className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 rounded-lg shadow-md transition duration-200"
                   size="lg"
                 >
                   🇺🇸 English
                 </Button>
                 <Button
                   onClick={() => handleLanguageSelect("es")}
-                  className="w-full bg-purple-600 hover:bg-purple-700 text-white"
+                  className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 rounded-lg shadow-md transition duration-200"
                   size="lg"
                 >
                   🇪🇸 Español
