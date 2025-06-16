@@ -169,7 +169,7 @@ const translations = {
     // Hero Section
     webMvpLive: "🚀 MVP Web Ya Disponible",
     heroTitle: "¿Por qué comprarlo cuando puedes",
-    heroTitleHighlight: "Revoo-arlo?",
+    heroTitleHighlight: "Revoo-earlo?",
     heroDescription:
       "Pide prestado lo que necesitas, alquila lo que no usas—y diviértete mientras ahorras dinero, reduces el desorden y conviertes el préstamo cotidiano en un paso hacia un futuro más sostenible.",
     startRenting: "Comenzar a Alquilar",
@@ -355,7 +355,7 @@ export default function LandingPage() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen w-full">
       {/* Language Selector Modal */}
       {showLanguageSelector && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
@@ -369,14 +369,14 @@ export default function LandingPage() {
               <div className="space-y-3">
                 <Button
                   onClick={() => handleLanguageSelect("en")}
-                  className="w-full bg-purple-600 hover:bg-purple-700 text-white"
+                  className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 rounded-lg shadow-md transition duration-200"
                   size="lg"
                 >
                   🇺🇸 English
                 </Button>
                 <Button
                   onClick={() => handleLanguageSelect("es")}
-                  className="w-full bg-purple-600 hover:bg-purple-700 text-white"
+                  className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 rounded-lg shadow-md transition duration-200"
                   size="lg"
                 >
                   🇪🇸 Español
@@ -388,59 +388,61 @@ export default function LandingPage() {
       )}
 
       {/* Header */}
-      <header className="px-4 lg:px-6 h-24 flex items-center border-b bg-white/95 backdrop-blur-sm sticky top-0 z-40">
-        <Link href="/" className="flex items-center justify-center">
-          <Image
-            src="/images/revoo-logo-transparent.png"
-            width="80"
-            height="80"
-            alt="Revoo logo"
-            className="h-20 w-20"
-          />
-          <span className="ml-3 text-3xl font-bold text-gray-900">Revoo</span>
-        </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link href="#how-it-works" className="text-sm font-medium hover:text-purple-600 transition-colors">
-            {t.howItWorks}
+      <header className="w-full px-4 lg:px-6 h-24 flex items-center border-b bg-white/95 backdrop-blur-sm sticky top-0 z-40">
+        <div className="container mx-auto max-w-7xl flex items-center w-full">
+          <Link href="/" className="flex items-center justify-center">
+            <Image
+              src="/images/revoo-logo-transparent.png"
+              width="80"
+              height="80"
+              alt="Revoo logo"
+              className="h-20 w-20"
+            />
+            <span className="ml-3 text-3xl font-bold text-gray-900">Revoo</span>
           </Link>
-          <Link href="#categories" className="text-sm font-medium hover:text-purple-600 transition-colors">
-            {t.categories}
-          </Link>
-          <Link href="#app" className="text-sm font-medium hover:text-purple-600 transition-colors">
-            {t.mobileApp}
-          </Link>
-        </nav>
-        <div className="ml-6 flex gap-2 items-center">
-          {/* Language Switcher */}
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={() => {
-              trackButtonClick("Language Switcher", "Header")
-              setShowLanguageSelector(true)
-            }}
-            className="flex items-center gap-1"
-          >
-            <Languages className="h-4 w-4" />
-            {language === "en" ? "EN" : "ES"}
-          </Button>
-          <Button
-            size="sm"
-            className="bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700"
-            onClick={() => {
-              trackButtonClick("Get Started", "Header")
-              setShowRentForm(true)
-            }}
-          >
-            {t.getStarted}
-          </Button>
+          <nav className="ml-auto flex gap-4 sm:gap-6">
+            <Link href="#how-it-works" className="text-sm font-medium hover:text-purple-600 transition-colors">
+              {t.howItWorks}
+            </Link>
+            <Link href="#categories" className="text-sm font-medium hover:text-purple-600 transition-colors">
+              {t.categories}
+            </Link>
+            <Link href="#app" className="text-sm font-medium hover:text-purple-600 transition-colors">
+              {t.mobileApp}
+            </Link>
+          </nav>
+          <div className="ml-6 flex gap-2 items-center">
+            {/* Language Switcher */}
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => {
+                trackButtonClick("Language Switcher", "Header")
+                setShowLanguageSelector(true)
+              }}
+              className="flex items-center gap-1"
+            >
+              <Languages className="h-4 w-4" />
+              {language === "en" ? "EN" : "ES"}
+            </Button>
+            <Button
+              size="sm"
+              className="bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700"
+              onClick={() => {
+                trackButtonClick("Get Started", "Header")
+                setShowRentForm(true)
+              }}
+            >
+              {t.getStarted}
+            </Button>
+          </div>
         </div>
       </header>
 
       <main className="flex-1">
         {/* Hero Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-purple-50 via-violet-50 to-indigo-50">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6 max-w-7xl">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
@@ -493,11 +495,11 @@ export default function LandingPage() {
               </div>
               <div className="flex items-center justify-center">
                 <Image
-                  src="/placeholder.svg?height=400&width=600&text=Friends+sharing+items+with+Revoo"
+                  src="/images/hero-people-sharing-drill.png"
                   width="600"
-                  height="400"
-                  alt="Friends sharing and renting items through Revoo"
-                  className="mx-auto aspect-video overflow-hidden rounded-xl object-cover shadow-2xl"
+                  height="600"
+                  alt="Two people sharing a power drill through Revoo - demonstrating peer-to-peer rental"
+                  className="mx-auto rounded-xl object-contain shadow-2xl max-w-full h-auto"
                 />
               </div>
             </div>
@@ -506,7 +508,7 @@ export default function LandingPage() {
 
         {/* How It Works */}
         <section id="how-it-works" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6 max-w-7xl">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">{t.howRevooWorks}</h2>
@@ -595,7 +597,7 @@ export default function LandingPage() {
 
         {/* Categories */}
         <section id="categories" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6 max-w-7xl">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">{t.popularCategories}</h2>
@@ -632,8 +634,8 @@ export default function LandingPage() {
           id="app"
           className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-br from-purple-900 via-violet-900 to-indigo-900 text-white"
         >
-          <div className="container px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+          <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+            <div className="grid gap-6 lg:grid-cols-[1fr_600px] lg:gap-12 xl:grid-cols-[1fr_700px]">
               <div className="flex flex-col justify-center space-y-6">
                 <div className="space-y-4">
                   <Badge className="bg-white/10 text-white hover:bg-white/10 w-fit">
@@ -688,10 +690,10 @@ export default function LandingPage() {
                 <div className="relative">
                   <Image
                     src="/images/revoo-mobile-app-mockup.png"
-                    width="600"
-                    height="1200"
+                    width="800"
+                    height="1600"
                     alt="Revoo mobile app interface mockup showing search, categories, and featured items"
-                    className="mx-auto drop-shadow-2xl"
+                    className="mx-auto drop-shadow-2xl max-h-[700px] w-auto"
                   />
                 </div>
               </div>
@@ -701,7 +703,7 @@ export default function LandingPage() {
 
         {/* Benefits */}
         <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6 max-w-7xl">
             <div className="grid gap-6 lg:grid-cols-[1fr_500px] lg:gap-12 xl:grid-cols-[1fr_550px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
@@ -736,11 +738,11 @@ export default function LandingPage() {
               </div>
               <div className="flex items-center justify-center">
                 <Image
-                  src="/why-choose-icons.png"
+                  src="/images/trust-security-features.png"
                   width="550"
                   height="400"
-                  alt="Why Choose Revoo icons"
-                  className="mx-auto object-contain max-w-full h-auto rounded-xl shadow-lg"
+                  alt="Trust and security features of the Revoo platform"
+                  className="mx-auto aspect-video overflow-hidden rounded-xl object-cover shadow-lg"
                 />
               </div>
             </div>
@@ -749,7 +751,7 @@ export default function LandingPage() {
 
         {/* CTA Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-r from-purple-600 to-violet-600">
-          <div className="container px-4 md:px-6">
+          <div className="container mx-auto px-4 md:px-6 max-w-7xl">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-white">{t.readyToStart}</h2>
@@ -796,30 +798,32 @@ export default function LandingPage() {
 
       {/* Footer */}
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t bg-gray-50">
-        <div className="flex items-center gap-2">
-          <Image
-            src="/images/revoo-logo-transparent.png"
-            width="48"
-            height="48"
-            alt="Revoo logo"
-            className="h-12 w-12"
-          />
-          <p className="text-xs text-gray-600">{t.allRightsReserved}</p>
+        <div className="container mx-auto max-w-7xl flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Image
+              src="/images/revoo-logo-transparent.png"
+              width="48"
+              height="48"
+              alt="Revoo logo"
+              className="h-12 w-12"
+            />
+            <p className="text-xs text-gray-600">{t.allRightsReserved}</p>
+          </div>
+          <nav className="sm:ml-auto flex gap-4 sm:gap-6">
+            <Link href="#" className="text-xs hover:underline underline-offset-4 text-gray-600 hover:text-purple-600">
+              {t.termsOfService}
+            </Link>
+            <Link href="#" className="text-xs hover:underline underline-offset-4 text-gray-600 hover:text-purple-600">
+              {t.privacyPolicy}
+            </Link>
+            <Link href="#" className="text-xs hover:underline underline-offset-4 text-gray-600 hover:text-purple-600">
+              {t.support}
+            </Link>
+            <Link href="#" className="text-xs hover:underline underline-offset-4 text-gray-600 hover:text-purple-600">
+              {t.contact}
+            </Link>
+          </nav>
         </div>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link href="#" className="text-xs hover:underline underline-offset-4 text-gray-600 hover:text-purple-600">
-            {t.termsOfService}
-          </Link>
-          <Link href="#" className="text-xs hover:underline underline-offset-4 text-gray-600 hover:text-purple-600">
-            {t.privacyPolicy}
-          </Link>
-          <Link href="#" className="text-xs hover:underline underline-offset-4 text-gray-600 hover:text-purple-600">
-            {t.support}
-          </Link>
-          <Link href="#" className="text-xs hover:underline underline-offset-4 text-gray-600 hover:text-purple-600">
-            {t.contact}
-          </Link>
-        </nav>
       </footer>
 
       {/* Modal Forms */}
