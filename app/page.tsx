@@ -269,6 +269,8 @@ const translations = {
     itemsPlaceholderRent: "ej., Taladro, Cámara, Bicicleta...",
     itemsPlaceholderList: "ej., Herramientas eléctricas, Equipo de cámara, Equipo deportivo...",
     locationPlaceholder: "ej., Madrid, Barcelona...",
+    whenYouNeedIt: "¿Para qué fechas lo necesitas?",
+    datesPlaceholder: "ej., 20–23 de junio",
 
     // Success/Error messages
     thankYouMessage: "¡Gracias! Hemos recibido tu solicitud de {type} y te contactaremos pronto.",
