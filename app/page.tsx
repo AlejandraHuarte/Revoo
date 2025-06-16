@@ -861,7 +861,7 @@ export default function LandingPage() {
                   <Input id="rent-location" name="location" placeholder={t.locationPlaceholder} className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500" />
                 </div>
                 <div>
-                 <label htmlFor="rent-dates">{t.datesNeeded}</label>
+                 <label htmlFor="rent-dates">{t.whenYouNeedIt}</label>
                 <input
                   id="rent-dates"
                   name="dates"
