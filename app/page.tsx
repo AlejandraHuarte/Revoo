@@ -840,7 +840,7 @@ export default function LandingPage() {
               <form onSubmit={(e) => handleFormSubmit(e, "Rent Request")} className="space-y-4">
                 <div>
                   <Label htmlFor="rent-name">{t.name}</Label>
-                  <Input id="rent-name" name="name" required className="w-full px-3 py-2 border border-gray-300 rounded-fu focus:outline-none focus:ring-2 focus:ring-purple-500" />
+                  <Input id="rent-name" name="name" required className="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-600" />
                 </div>
                 <div>
                   <Label htmlFor="rent-email">{t.email}</Label>
