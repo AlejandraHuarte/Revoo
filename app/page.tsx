@@ -736,11 +736,11 @@ export default function LandingPage() {
               </div>
               <div className="flex items-center justify-center">
                 <Image
-                  src="/placeholder.svg?height=400&width=550&text=Trust+and+Security+with+Revoo"
+                  src="/why-choose-icons.png"
                   width="550"
                   height="400"
-                  alt="Trust and security features of the Revoo platform"
-                  className="mx-auto aspect-video overflow-hidden rounded-xl object-cover shadow-lg"
+                  alt="Why Choose Revoo icons"
+                  className="mx-auto object-contain max-w-full h-auto rounded-xl shadow-lg"
                 />
               </div>
             </div>
