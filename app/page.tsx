@@ -389,18 +389,20 @@ export default function LandingPage() {
 
       {/* Header */}
       <header className="w-full px-4 lg:px-6 h-24 flex items-center border-b bg-white/95 backdrop-blur-sm sticky top-0 z-40">
-        <div className="container mx-auto max-w-7xl flex items-center w-full">
+        <div className="container mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between w-full gap-2">
           <Link href="/" className="flex items-center justify-center">
             <Image
               src="/images/revoo-logo-transparent.png"
-              width="80"
-              height="80"
+              width="60"
+              height="60"
               alt="Revoo logo"
-              className="h-20 w-20"
+              className="h-12 w-12 md:h-20 md:w-20"
             />
             <span className="ml-3 text-3xl font-bold text-gray-900">Revoo</span>
           </Link>
-          <nav className="ml-auto flex gap-4 sm:gap-6">
+          
+          <div className="md:hidden h-px w-full bg-gray-200 my-2"></div>
+          <nav className="flex gap-2 md:gap-6 flex-wrap justify-center md:justify-start w-full md:w-auto">
             <Link href="#how-it-works" className="text-sm font-medium hover:text-purple-600 transition-colors">
               {t.howItWorks}
             </Link>
