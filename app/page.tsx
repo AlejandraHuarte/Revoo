@@ -369,14 +369,14 @@ export default function LandingPage() {
               <div className="space-y-3">
                 <Button
                   onClick={() => handleLanguageSelect("en")}
-                  className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 rounded-lg shadow-md transition duration-200"
+                  className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 rounded-full shadow-md transition duration-200"
                   size="lg"
                 >
                   🇺🇸 English
                 </Button>
                 <Button
                   onClick={() => handleLanguageSelect("es")}
-                  className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 rounded-lg shadow-md transition duration-200"
+                  className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-full shadow-md transition duration-200"
                   size="lg"
                 >
                   🇪🇸 Español
@@ -420,14 +420,14 @@ export default function LandingPage() {
                 trackButtonClick("Language Switcher", "Header")
                 setShowLanguageSelector(true)
               }}
-              className="flex items-center gap-1"
+              className="flex items-center gap-1 bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-700 transition duration-200"
             >
               <Languages className="h-4 w-4" />
               {language === "en" ? "EN" : "ES"}
             </Button>
             <Button
               size="sm"
-              className="bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700"
+              className="bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700 text-white px-4 py-2 rounded-full transition duration-200"
               onClick={() => {
                 trackButtonClick("Get Started", "Header")
                 setShowRentForm(true)
@@ -458,7 +458,7 @@ export default function LandingPage() {
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Button
                     size="lg"
-                    className="bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700 w-full min-[400px]:w-auto"
+                    className="bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700 text-white px-6 py-3 rounded-full w-full min-[400px]:w-auto transition duration-200"
                     onClick={() => {
                       trackButtonClick("Start Renting", "Hero Section")
                       setShowRentForm(true)
@@ -469,13 +469,13 @@ export default function LandingPage() {
                   <Button
                     variant="outline"
                     size="lg"
-                    className="border-purple-200 text-purple-700 hover:bg-purple-50 w-full min-[400px]:w-auto"
+                    className="border border-purple-600 text-purple-700 hover:bg-purple-50 px-6 py-3 rounded-full w-full min-[400px]:w-auto transition duration-200"
                     onClick={() => {
                       trackButtonClick("List Your Items", "Hero Section")
                       setShowListForm(true)
                     }}
                   >
-                    {t.listYourItems} <ExternalLink className="ml-2 h-4 w-4" />
+                    {t.listYourItems} <ExternalLink className="ml-2 h-4 w-4 opacity-80" />
                   </Button>
                 </div>
                 <div className="flex items-center gap-4 text-sm text-gray-600">
@@ -777,7 +777,7 @@ export default function LandingPage() {
                 <Button
                   size="lg"
                   variant="secondary"
-                  className="bg-white text-purple-600 hover:bg-gray-100 w-full min-[400px]:w-auto"
+                  className="bg-white text-purple-600 hover:bg-gray-100 px-6 py-3 rounded-full w-full min-[400px]:w-auto transition duration-200 transform hover:scale-105"
                   onClick={() => setShowRentForm(true)}
                 >
                   {t.browseItems}
@@ -785,7 +785,7 @@ export default function LandingPage() {
                 <Button
                   size="lg"
                   variant="secondary"
-                  className="bg-white text-purple-600 hover:bg-gray-100 w-full min-[400px]:w-auto"
+                  className="bg-white text-purple-600 hover:bg-gray-100 px-6 py-3 rounded-full w-full min-[400px]:w-auto transition duration-200 transform hover:scale-105"
                   onClick={() => setShowListForm(true)}
                 >
                   {t.listYourItems}
@@ -858,7 +858,8 @@ export default function LandingPage() {
                   <Label htmlFor="rent-location">{t.yourLocation}</Label>
                   <Input id="rent-location" name="location" placeholder={t.locationPlaceholder} />
                 </div>
-                <Button type="submit" className="w-full bg-purple-600 hover:bg-purple-700" disabled={isSubmitting}>
+                <Button type="submit" className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 px-6 rounded-full font-semibold transition duration-200"
+ disabled={isSubmitting}>
                   {isSubmitting ? (
                     <>
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -905,7 +906,7 @@ export default function LandingPage() {
                   <Label htmlFor="list-location">{t.yourLocation}</Label>
                   <Input id="list-location" name="location" placeholder={t.locationPlaceholder} />
                 </div>
-                <Button type="submit" className="w-full bg-purple-600 hover:bg-purple-700" disabled={isSubmitting}>
+                <Button type="submit" className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 px-6 rounded-full font-semibold transition duration-200" disabled={isSubmitting}>
                   {isSubmitting ? (
                     <>
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -940,7 +941,7 @@ export default function LandingPage() {
                   <Label htmlFor="newsletter-name">{t.nameOptional}</Label>
                   <Input id="newsletter-name" name="name" />
                 </div>
-                <Button type="submit" className="w-full bg-purple-600 hover:bg-purple-700" disabled={isSubmitting}>
+                <Button type="submit" className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 px-6 rounded-full font-semibold shadow-md transition duration-200" disabled={isSubmitting}>
                   {isSubmitting ? (
                     <>
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
