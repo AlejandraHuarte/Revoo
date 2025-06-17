@@ -8,7 +8,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
-import ItemGrid from "@/components/ui/ItemGrid";
+import ItemGrid from "@/components/ItemGrid";
 import {
   Search,
   DollarSign,
