@@ -1,53 +1,62 @@
-// components/ItemGrid.tsx
+"use client";
 
 import Image from "next/image";
 
+type Language = "en" | "es";
+
 const items = [
   {
-    title: "Canon Camera",
-    price: "€5/day",
-    image: "/items/camera.jpg",
+    title_en: "Fan",
+    title_es: "Ventilador",
+    price_en: "€3/day",
+    price_es: "3€/día",
+    image: "/images/fan.jpg",
   },
   {
-    title: "Party Speaker",
-    price: "€3/day",
-    image: "/items/speaker.jpg",
+    title_en: "Tripod",
+    title_es: "Trípode",
+    price_en: "€4/day",
+    price_es: "4€/día",
+    image: "/images/tripod.jpg",
   },
   {
-    title: "Iron",
-    price: "€2/day",
-    image: "/items/iron.jpg",
+    title_en: "Motorcycle Helmet",
+    title_es: "Casco de moto",
+    price_en: "€6/day",
+    price_es: "6€/día",
+    image: "/images/helmet.jpg",
   },
   {
-    title: "Fan",
-    price: "€2/day",
-    image: "/items/fan.jpg",
-  },
-  {
-    title: "Tripod",
-    price: "€4/day",
-    image: "/items/tripod.jpg",
+    title_en: "Golf Clubs",
+    title_es: "Palos de golf",
+    price_en: "€7/day",
+    price_es: "7€/día",
+    image: "/images/golf-clubs.jpg",
   },
 ];
 
-export default function ItemGrid() {
+export default function ItemGrid({ language = "en" }: { language?: Language }) {
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-      {items.map((item, index) => (
+      {items.map((item) => (
         <div
-          key={index}
+          key={item.title_en}
           className="rounded-xl border border-gray-200 p-4 shadow hover:shadow-md transition"
         >
           <div className="w-full h-40 relative rounded-lg overflow-hidden mb-3">
             <Image
               src={item.image}
-              alt={item.title}
+              alt={language === "es" ? item.title_es : item.title_en}
               fill
               className="object-cover"
             />
           </div>
-          <h3 className="text-md font-semibold">{item.title}</h3>
-          <p className="text-sm text-purple-600">{item.price}</p>
+          <h3 className="text-md font-semibold">
+            {language === "es" ? item.title_es : item.title_en}
+          </h3>
+          <p className="text-sm text-purple-600">
+            {language === "es" ? item.price_es : item.price_en}
+          </p>
         </div>
       ))}
     </div>
